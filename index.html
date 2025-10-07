@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Powerful Mantras PDF</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    header {
+        padding: 50px 20px 20px 20px;
+    }
+    header h1 {
+        font-size: 3em;
+        color: gold;
+        text-shadow: 2px 2px 5px #000;
+        margin-bottom: 20px;
+    }
+    header p {
+        font-size: 1.2em;
+        max-width: 700px;
+        margin: auto;
+    }
+    .cover {
+        margin: 40px 0;
+    }
+    .cover img {
+        max-width: 90%;
+        border-radius: 15px;
+        box-shadow: 0 0 30px gold;
+    }
+    .benefits {
+        background: rgba(255, 215, 0, 0.1);
+        padding: 30px 20px;
+        margin: 30px auto;
+        max-width: 800px;
+        border-radius: 15px;
+    }
+    .benefits h2 {
+        color: gold;
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    .benefits ul {
+        list-style: none;
+        padding: 0;
+    }
+    .benefits li {
+        font-size: 1.2em;
+        margin: 15px 0;
+        position: relative;
+        padding-left: 25px;
+    }
+    .benefits li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: gold;
+        font-weight: bold;
+    }
+    .buy-section {
+        margin: 40px 0;
+    }
+    .buy-section button {
+        background: gold;
+        color: #000;
+        font-size: 1.5em;
+        padding: 15px 40px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        box-shadow: 0 0 20px gold;
+        transition: transform 0.2s;
+    }
+    .buy-section button:hover {
+        transform: scale(1.1);
+    }
+    footer {
+        padding: 30px 20px;
+        font-size: 0.9em;
+        color: #ccc;
+        background: rgba(0,0,0,0.2);
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Powerful Mantras</h1>
+    <p>Unlock your inner energy and attract positivity with carefully selected mantras. Boost confidence, reduce stress, and improve focus. Perfect for anyone seeking self-improvement, motivation, and spiritual growth.</p>
+</header>
+
+<div class="cover">
+    <img src="https://images.unsplash.com/photo-1612197523371-622b5b05f5f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VlfHx8fHx8fHwxNjkxNzUyNzI1&ixlib=rb-4.0.3&q=80&w=1200" alt="Powerful Mantras Cover">
+</div>
+
+<div class="benefits">
+    <h2>Benefits You'll Get:</h2>
+    <ul>
+        <li>Boost confidence and focus</li>
+        <li>Attract positivity and success</li>
+        <li>Reduce stress and anxiety</li>
+        <li>Improve personal and professional growth</li>
+        <li>Easy to practice daily</li>
+    </ul>
+</div>
+
+<div class="buy-section">
+    <button id="rzp-button">Buy Now for ₹19</button>
+</div>
+
+<footer>
+    &copy; 2025 Powerful Mantras | Secure Payment via Razorpay
+</footer>
+
+<!-- Razorpay Script -->
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+var options = {
+    "key": "YOUR_RAZORPAY_KEY", // Replace with your Razorpay Key
+    "amount": 1900, // ₹19 in paise
+    "currency": "INR",
+    "name": "Powerful Mantras PDF",
+    "description": "Download instantly after payment",
+    "handler": function (response){
+        // Redirect to your PDF download page
+        window.location.href = "https://drive.google.com/uc?export=download&id=1aXRo5sbUUCnJiUaFu7oXn1VfkXZPx4UR";
+    },
+    "theme": {
+        "color": "#FBBF24"
+    }
+};
+var rzp1 = new Razorpay(options);
+document.getElementById('rzp-button').onclick = function(e){
+    rzp1.open();
+    e.preventDefault();
+}
+</script>
+
+</body>
+</html>
